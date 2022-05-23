@@ -1,0 +1,108 @@
+body {
+  caret-color: transparent;
+  margin: 0;
+  background-color: #525659;
+  font-family: Segoe UI, Tahoma, sans-serif;
+}
+
+.Example input,
+.Example button {
+  font: inherit;
+}
+
+.Example header {
+  background-color: #323639;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+}
+
+.Example header h1 {
+  font-size: inherit;
+  margin: 0;
+}
+.Example header p {
+  font-size: 1.5rem;
+}
+.Example__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.Example__container__load {
+  margin-top: 1em;
+  color: white;
+}
+
+.Example__container__document {
+  margin: 1em 0;
+}
+
+.Example__container__document .react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Example__container__document .react-pdf__Page {
+  max-width: calc(100% - 2em);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  margin: 1em;
+}
+
+.Example__container__document .react-pdf__Page canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.Example__container__document .react-pdf__message {
+  padding: 20px;
+  color: white;
+}
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 22;
+  background-color: aliceblue;
+}
+
+.close {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  z-index: 20;
+  height: 40px;
+  padding-bottom: 10px;
+  font-size: x-large;
+  margin-bottom: 10px;
+  background-color: aliceblue;
+}
+.hide {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  justify-content: center;
+  z-index: 20;
+  width: 10vw;
+}
+
+.title {
+  color: bisque;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+#hide {
+  margin-right: 5px;
+}
+
+.input {
+  caret-color: black;
+}
