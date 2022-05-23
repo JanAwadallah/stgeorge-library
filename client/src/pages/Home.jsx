@@ -15,7 +15,7 @@ const Home = () => {
 
   const [isAdmin, setIsAdmin] = useState(false);
   const getFiles = async () => {
-    const fetchedFiles = await axios.get("https://stgeorge-library.herokuapp.com/api/files");
+    const fetchedFiles = await axios.get("https://stgeorgelibrary.herokuapp.com/api/files");
     setFiles(fetchedFiles.data);
     const allYears = fetchedFiles.data.map((file) => {
       return file.year;
