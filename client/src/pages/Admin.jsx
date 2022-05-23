@@ -28,7 +28,7 @@ const Admin = () => {
       //   method: "POST",
       //   body: formData,
       // });
-      const res = await axios.post("/upload", formData, {
+      const res = await axios.post("https://stgeorge-library.herokuapp.com/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

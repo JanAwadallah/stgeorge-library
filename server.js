@@ -7,6 +7,8 @@ import multer from "multer";
 import cors from "cors";
 import File from "./models/fileModel.js";
 import asyncHandler from "express-async-handler";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 
@@ -59,10 +61,17 @@ app.post(
 );
 
 app.use("/api/files", fileRoutes);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 const PORT = process.env.PORT;
 app.listen(
-  PORT,
+  PORT || 5000,
   console.log(
     `Serving on PORT ${PORT} in ${process.env.NODE_ENV} mode`.green.bold
       .underline
